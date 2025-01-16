@@ -11,7 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition  Height="90"/>
             <RowDefinition/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="120"/>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -19,10 +19,12 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
         <Border Grid.Row="0"
                 Grid.Column="0"
-                Grid.ColumnSpan="4"
+                Grid.ColumnSpan="5"
                 Margin="10,20,10,10"
                 BackgroundColor="#20ffffff"
                 Stroke="Transparent"
@@ -38,73 +40,185 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                
-            <Label
-                Grid.Row="0"
-                Grid.Column="0"
-                Text="Inapoi"
-                TextColor="Black"
-                VerticalTextAlignment="Center"           
-                IsVisible="True"
-                HorizontalOptions="Start"/>
+
+
+                <ImageButton Source="arrow.png"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Clicked="OnArrowBackButtonClicked"
+                    HorizontalOptions="Start"
+                    IsEnabled="True"
+                    VerticalOptions="Center" />
+
+                 
 
                 <Label
                     Grid.Row="0"
                     Grid.Column="1"
-                    Text="VremuriBune"
-                    TextColor="Black"
+                    Text="Vreme Bună"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#019cd5"
+                    
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     IsVisible="True"
                     HorizontalOptions="Center"/>
 
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="2"
-                    Text="da"
-                    TextColor="Black"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    IsVisible="True"
-                    HorizontalOptions="End"/>
+
+
+
+
+                <ImageButton Source="info.png"
+                             
+                     Grid.Row="0"
+                     Grid.Column="2"
+                     HorizontalOptions="End"
+                    IsEnabled="True"
+                    VerticalOptions="Center" />
+
+
+                
             </Grid>
 
 
 
         </Border>
 
-        <Label Grid.Row="1"
-               Grid.Column="0"
-               Grid.ColumnSpan="4"
-               TextColor="White"   
-               Text="Column 0, Row 1"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center"
-               />
+        <Border Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                Margin="10,20,10,10"
+                BackgroundColor="#20ffffff"
+                Stroke="Transparent"
+                Padding="10" >
 
-        <Label Grid.Row="2"
-        Grid.Column="0"
-        TextColor="White"   
-        Text="C 1, R 2" />
-        <Label Grid.Row="2"
-               Grid.Column="1"
-               TextColor="White"   
-               Text="C 1, R 2" />
-        
-        <Label Grid.Row="2"
-                Grid.Column="2"
-                TextColor="White"   
-                Text="C 1, R 2" />
-        
-        <Label Grid.Row="2"
-                Grid.Column="3"
-                TextColor="White"   
-                Text="C 1, R 2" />
-        
-        <Label Grid.Row="2"
-                 Grid.Column="4"
-                 TextColor="White"   
-                 Text="C 1, R 2" />
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+
+
+            <VerticalStackLayout>
+                <Image WidthRequest="100" HeightRequest="100"/>
+                <Label HorizontalOptions="Center" FontSize="70"   TextColor="White" Text="0°C"/>
+                <Label HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" TextColor="White" Text="Raining"/>
+                <Label HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" TextColor="White" Text="Moldova, Chișinău"/>
+
+
+            </VerticalStackLayout>
+
+        </Border>
+
+        <Border
+   Grid.Row="2"
+   Grid.Column="0"
+   Stroke="Transparent"
+   BackgroundColor="#20ffffff"
+   Margin="10,10,10,10">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout  VerticalOptions="Center">
+                <Label
+              TextColor="White"
+              HorizontalTextAlignment="Center"
+              Text="Ma."/>
+                <Label
+             TextColor="White"
+             HorizontalTextAlignment="Center"
+             Text="20°C"/>
+            </VerticalStackLayout>
+        </Border>
+
+
+
+        <Border
+        Grid.Row="2"
+        Grid.Column="1"
+        Stroke="Transparent"
+        BackgroundColor="#20ffffff"
+        Margin="10,10,10,10">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout  VerticalOptions="Center">
+                <Label
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   Text="Mi."/>
+                <Label
+                  TextColor="White"
+                  HorizontalTextAlignment="Center"
+                  Text="20°C"/>
+            </VerticalStackLayout>
+        </Border>
+        <Border
+         Grid.Row="2"
+         Grid.Column="2"
+         Stroke="Transparent"
+         BackgroundColor="#20ffffff"
+        Margin="10,10,10,10">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout  VerticalOptions="Center">
+                <Label
+              TextColor="White"
+              HorizontalTextAlignment="Center"
+              Text="Joi"/>
+                <Label
+             TextColor="White"
+             HorizontalTextAlignment="Center"
+             Text="20°C"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border
+         Grid.Row="2"
+         Grid.Column="3"
+         Stroke="Transparent"
+         BackgroundColor="#20ffffff"
+         Margin="10,10,10,10">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout  VerticalOptions="Center">
+                <Label
+              TextColor="White"
+              HorizontalTextAlignment="Center"
+              Text="Vin."/>
+                <Label
+             TextColor="White"
+             HorizontalTextAlignment="Center"
+             Text="20°C"/>
+            </VerticalStackLayout>
+        </Border>
+
+
+
+
+        <Border
+         Grid.Row="2"
+         Grid.Column="4"
+         Stroke="Transparent"
+         BackgroundColor="#20ffffff"
+         Margin="10,10,10,10">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout  VerticalOptions="Center">
+                <Label
+              TextColor="White"
+              HorizontalTextAlignment="Center"
+              Text="Sam."/>
+                <Label
+             TextColor="White"
+             HorizontalTextAlignment="Center"
+             Text="20°C"/>
+            </VerticalStackLayout>
+        </Border>
+
+
     </Grid>
 
 </ContentPage>

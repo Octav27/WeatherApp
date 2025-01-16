@@ -6,13 +6,19 @@ namespace WeatherApp
     {
         public static MauiApp CreateMauiApp()
         {
+
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Kanit-Regular.ttf", "KanitRegular");
+                    fonts.AddFont("Kanit-Medium.ttf", "KanitMedium");
+                    fonts.AddFont("Kanit-Black.ttf", "KanitBlack");
+                    fonts.AddFont("Kanit-Bold.ttf", "KanitBold");
+                    fonts.AddFont("Kanit-Italic.ttf", "KanitItalic");
+                    fonts.AddFont("Kanit-Semibold.ttf", "KanitSemibold");
                 });
 
 #if DEBUG
