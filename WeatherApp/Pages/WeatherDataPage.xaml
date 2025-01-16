@@ -5,10 +5,106 @@
              Title="Weather Data"
              BackgroundColor="#011a2e"
              >
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="90"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Margin="10,20,10,10"
+                BackgroundColor="#20ffffff"
+                Stroke="Transparent"
+                Padding="10" 
+                >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Inapoi"
+                TextColor="Black"
+                VerticalTextAlignment="Center"           
+                IsVisible="True"
+                HorizontalOptions="Start"/>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="VremuriBune"
+                    TextColor="Black"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    IsVisible="True"
+                    HorizontalOptions="Center"/>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Text="da"
+                    TextColor="Black"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    IsVisible="True"
+                    HorizontalOptions="End"/>
+            </Grid>
+
+
+
+        </Border>
+
+        <Label Grid.Row="1"
+               Grid.Column="0"
+               Grid.ColumnSpan="4"
+               TextColor="White"   
+               Text="Column 0, Row 1"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               />
+
+        <Label Grid.Row="2"
+        Grid.Column="0"
+        TextColor="White"   
+        Text="C 1, R 2" />
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               TextColor="White"   
+               Text="C 1, R 2" />
+        
+        <Label Grid.Row="2"
+                Grid.Column="2"
+                TextColor="White"   
+                Text="C 1, R 2" />
+        
+        <Label Grid.Row="2"
+                Grid.Column="3"
+                TextColor="White"   
+                Text="C 1, R 2" />
+        
+        <Label Grid.Row="2"
+                 Grid.Column="4"
+                 TextColor="White"   
+                 Text="C 1, R 2" />
+    </Grid>
+
 </ContentPage>
