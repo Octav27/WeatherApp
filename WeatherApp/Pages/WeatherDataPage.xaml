@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WeatherApp.Pages.WeatherDataPage"
              Title="Weather Data"
+             xmlns:vm="clr-namespace:WeatherApp.Models.ViewsModels"
+             x:DataType="vm:WeatherDataPageViewModel"
              BackgroundColor="#011a2e"
              >
 
@@ -42,10 +44,11 @@
                 </Grid.ColumnDefinitions>
 
 
-                <ImageButton Source="arrow.png"
+                <Button Text="adag"
                     Grid.Column="0"
                     Grid.Row="0"
-                    Clicked="OnArrowBackButtonClicked"
+                    Command="{Binding FetchWeatherInfoCommand}"
+                       
                     HorizontalOptions="Start"
                     IsEnabled="True"
                     VerticalOptions="Center" />
@@ -99,10 +102,10 @@
 
 
             <VerticalStackLayout>
-                <Image WidthRequest="100" HeightRequest="100"/>
-                <Label HorizontalOptions="Center" FontSize="70"   TextColor="White" Text="0°C"/>
-                <Label HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" TextColor="White" Text="Raining"/>
-                <Label HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" TextColor="White" Text="Moldova, Chișinău"/>
+                <Image WidthRequest="100" HeightRequest="100" Source="{Binding WeatherIcon}"/>
+                <Label HorizontalOptions="Center" FontSize="70"   TextColor="White" Text="{Binding Temperature}" />
+                <Label HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" TextColor="White" Text="{Binding WeatherDescription}"/>
+                <Label HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" TextColor="White" Text="{Binding Location}"/>
 
 
             </VerticalStackLayout>
