@@ -45,11 +45,11 @@ namespace WeatherApp.Models.ViewsModels
 
                 Console.WriteLine("Nu e null");
 
-                WeatherIcon =  weatherApiResponse.Current.Weather_icons[0];
-                Temperature = $"{weatherApiResponse.Current.Temperature}C";
+                WeatherIcon =  $"https://openweathermap.org/img/wn/{weatherApiResponse.List[0].Weather[0].Icon}.png";
+                Temperature = $"{Convert.ToInt32(weatherApiResponse.List[0].Main.Temp)}°C";
 
-                Location = $"{weatherApiResponse.Location.Name}, {weatherApiResponse.Location.Region}, {weatherApiResponse.Location.Country}";
-                WeatherDescription = weatherApiResponse.Current.Weather_descriptions[0];
+                Location = $"{weatherApiResponse.City.Country}, {weatherApiResponse.City.Name}";
+                WeatherDescription = weatherApiResponse.List[0].Weather[0].Main;
             }
         }
     }

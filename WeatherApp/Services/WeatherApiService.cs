@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Maui.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Json;
@@ -25,7 +26,7 @@ namespace WeatherApp.Services
             if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet) return null;
 
             
-            return await _httpClient.GetFromJsonAsync<WeatherApiResponse>($"current?query={latitude},{longitude}&access_key={Constants.API_KEY}");
+            return await _httpClient.GetFromJsonAsync<WeatherApiResponse>($"data/2.5/forecast?lat={latitude}&lon={longitude}&appid={Constants.API_KEY}&units=metric&cnt=5");
         }
     }
 }

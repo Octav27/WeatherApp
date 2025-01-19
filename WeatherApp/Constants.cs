@@ -9,7 +9,7 @@ namespace WeatherApp
     internal class Constants
     {
 
-        public const string API_KEY = "79dcb8f30a4a4fda546884ca699411be";
-        public const string API_BASE_URL = "http://api.weatherstack.com/";
+        public const string API_KEY = "";
+        public const string API_BASE_URL = "http://api.openweathermap.org/";
     }
 }
